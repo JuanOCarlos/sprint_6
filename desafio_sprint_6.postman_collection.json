@@ -1,0 +1,721 @@
+{
+	"info": {
+		"_postman_id": "f34cd7d4-7eb8-4818-9a57-ab12942bc2bf",
+		"name": "desafio_sprint_6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26743111",
+		"_collection_link": "https://galactic-sunset-34094.postman.co/workspace/Team-Workspace~38d6e386-884f-4943-8db9-783b87c125de/collection/26743111-f34cd7d4-7eb8-4818-9a57-ab12942bc2bf?action=share&creator=26743111&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "http://localhost:8080/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"doctor\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "clinic",
+			"item": [
+				{
+					"name": "http://localhost:8080/clinic/new",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb2N0b3IiLCJpYXQiOjE2ODM5Mjc0NjcsImV4cCI6MTY4Mzk0NTQ2N30.rmjFq-OaVzh4i-qJuuvfnz0j1lu24JmbhLquGFfxCQg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Carlos Chagas\",\r\n    \"cnpj\": \"1234567\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/clinic/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clinic",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/clinic/listall",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb2N0b3IiLCJpYXQiOjE2ODM4NDc0MjQsImV4cCI6MTY4Mzg2NTQyNH0.wS5NnD7AtlylnbhAItLbrdnupCRjMEiDhxh8zgQn6dI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/clinic/listall",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clinic",
+								"listall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/clinic/list/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb2N0b3IiLCJpYXQiOjE2ODM4NDc0MjQsImV4cCI6MTY4Mzg2NTQyNH0.wS5NnD7AtlylnbhAItLbrdnupCRjMEiDhxh8zgQn6dI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Pet rescue\",\r\n    \"cnpj\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/clinic/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clinic",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/clinic/delete/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb2N0b3IiLCJpYXQiOjE2ODM4NDc0MjQsImV4cCI6MTY4Mzg2NTQyNH0.wS5NnD7AtlylnbhAItLbrdnupCRjMEiDhxh8zgQn6dI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/clinic/delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clinic",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "veterinary",
+			"item": [
+				{
+					"name": "http://localhost:8080/veterinary/new",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb2N0b3IiLCJpYXQiOjE2ODM4NDc0MjQsImV4cCI6MTY4Mzg2NTQyNH0.wS5NnD7AtlylnbhAItLbrdnupCRjMEiDhxh8zgQn6dI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Paulo\",\r\n    \"lastName\": \"Furna\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/veterinary/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veterinary",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/veterinary/listall",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb2N0b3IiLCJpYXQiOjE2ODM4NDc0MjQsImV4cCI6MTY4Mzg2NTQyNH0.wS5NnD7AtlylnbhAItLbrdnupCRjMEiDhxh8zgQn6dI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/veterinary/listall",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veterinary",
+								"listall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/veterinary/list/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb2N0b3IiLCJpYXQiOjE2ODM4NDc0MjQsImV4cCI6MTY4Mzg2NTQyNH0.wS5NnD7AtlylnbhAItLbrdnupCRjMEiDhxh8zgQn6dI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/veterinary/list/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veterinary",
+								"list",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/veterinary/update/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb2N0b3IiLCJpYXQiOjE2ODM4NDc0MjQsImV4cCI6MTY4Mzg2NTQyNH0.wS5NnD7AtlylnbhAItLbrdnupCRjMEiDhxh8zgQn6dI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Law\",\r\n    \"lastName\": \"Trafalgar D.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/veterinary/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veterinary",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/veterinary/delete/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb2N0b3IiLCJpYXQiOjE2ODM4NDc0MjQsImV4cCI6MTY4Mzg2NTQyNH0.wS5NnD7AtlylnbhAItLbrdnupCRjMEiDhxh8zgQn6dI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/veterinary/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veterinary",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "patient",
+			"item": [
+				{
+					"name": "http://localhost:8080/patient/new",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb2N0b3IiLCJpYXQiOjE2ODM5Mjc0NjcsImV4cCI6MTY4Mzk0NTQ2N30.rmjFq-OaVzh4i-qJuuvfnz0j1lu24JmbhLquGFfxCQg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Luffy\",\r\n    \"lastName\": \"Monkey D.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/patient/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patient",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/patient/listall",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb2N0b3IiLCJpYXQiOjE2ODM4NDc0MjQsImV4cCI6MTY4Mzg2NTQyNH0.wS5NnD7AtlylnbhAItLbrdnupCRjMEiDhxh8zgQn6dI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/patient/listall",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patient",
+								"listall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/patient/list/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb2N0b3IiLCJpYXQiOjE2ODM4NDc0MjQsImV4cCI6MTY4Mzg2NTQyNH0.wS5NnD7AtlylnbhAItLbrdnupCRjMEiDhxh8zgQn6dI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/patient/list/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patient",
+								"list",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/patient/update/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb2N0b3IiLCJpYXQiOjE2ODM4NDc0MjQsImV4cCI6MTY4Mzg2NTQyNH0.wS5NnD7AtlylnbhAItLbrdnupCRjMEiDhxh8zgQn6dI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Sanji\",\r\n    \"lastName\": \"Vinsmoke\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/patient/update/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patient",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/patient/delete/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb2N0b3IiLCJpYXQiOjE2ODM4NDc0MjQsImV4cCI6MTY4Mzg2NTQyNH0.wS5NnD7AtlylnbhAItLbrdnupCRjMEiDhxh8zgQn6dI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/patient/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patient",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "scheduling",
+			"item": [
+				{
+					"name": "http://localhost:8080/scheduling/new",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb2N0b3IiLCJpYXQiOjE2ODM4NDc0MjQsImV4cCI6MTY4Mzg2NTQyNH0.wS5NnD7AtlylnbhAItLbrdnupCRjMEiDhxh8zgQn6dI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"castração\",\r\n    \"daysOfTheWeek\": \"2023-03-10T12:30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/scheduling/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"scheduling",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/scheduling/listall",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb2N0b3IiLCJpYXQiOjE2ODM4NDc0MjQsImV4cCI6MTY4Mzg2NTQyNH0.wS5NnD7AtlylnbhAItLbrdnupCRjMEiDhxh8zgQn6dI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/scheduling/listall",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"scheduling",
+								"listall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/scheduling/list/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb2N0b3IiLCJpYXQiOjE2ODM4NDc0MjQsImV4cCI6MTY4Mzg2NTQyNH0.wS5NnD7AtlylnbhAItLbrdnupCRjMEiDhxh8zgQn6dI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/scheduling/list/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"scheduling",
+								"list",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/scheduling/update/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb2N0b3IiLCJpYXQiOjE2ODM4NDc0MjQsImV4cCI6MTY4Mzg2NTQyNH0.wS5NnD7AtlylnbhAItLbrdnupCRjMEiDhxh8zgQn6dI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"lavagem\",\r\n    \"daysOfTheWeek\": \"2023-04-12T13:30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/scheduling/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"scheduling",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/scheduling/delete/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkb2N0b3IiLCJpYXQiOjE2ODM4NDc0MjQsImV4cCI6MTY4Mzg2NTQyNH0.wS5NnD7AtlylnbhAItLbrdnupCRjMEiDhxh8zgQn6dI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/scheduling/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"scheduling",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
